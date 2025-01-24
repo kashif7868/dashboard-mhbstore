@@ -1,0 +1,221 @@
+.sidebar-container {
+  width: 275px;
+  height: 100vh;
+  background-color: #fff;
+  color: black;
+  box-shadow: 2px 0 10px rgba(0, 86, 193, 0.13);
+  transition: width 0.3s ease, background-color 0.3s ease;
+  overflow: auto;
+  position: relative;
+}
+
+.sidebar-container.collapsed {
+  width: 40px;
+  padding: 20px 0px;
+  box-shadow: none;
+}
+.sidebar-container.collapsed {
+  width: 40px;
+  padding: 20px 0px;
+  box-shadow: none;
+}
+/* Collapsed State */
+.sidebar-container.collapsed .dashboard-container,
+.sidebar-container.collapsed .contant-headings,
+.sidebar-container.collapsed .sidebar-group,
+.sidebar-container.collapsed .logout-button {
+  display: none;
+}
+
+/* Sidebar Logo */
+.sidebar-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar-logo-image {
+  width: 120px;
+  transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.sidebar-container.collapsed .sidebar-logo-image {
+  display: none;
+}
+
+.sidebar-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.sidebar-toggle .sidebar-toggle-icon-open {
+  position: relative;
+  bottom: 8px;
+}
+
+.sidebar-toggle:hover {
+  color: #ffb700;
+  transform: scale(1.2);
+}
+
+/* Content Headings */
+.contant-headings {
+  color: #bdc7d3;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: uppercase;
+  margin: 15px 0 10px 14px;
+}
+
+/* Dashboard Link */
+.dashboard-container {
+  padding: 10px 15px;
+}
+
+.dashboard-link,
+.reports-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.dashboard-link:hover,
+.reports-link:hover {
+  background-color: #f7f9fc;
+  color: #007bff;
+  border-radius: 4px;
+}
+
+.dashboard-link .icon,
+.reports-link .icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+/* Sidebar Groups */
+.sidebar-group {
+  margin-bottom: 15px;
+  padding: 0px 10px;
+  border-left: 2px solid #d9d9d9;
+}
+
+/* Sidebar Group Title */
+.sidebar-group-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: left;
+}
+
+.sidebar-group-title span.icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Arrow Icon */
+.sidebar-group-title .arrow-icon {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.sidebar-group-title:hover {
+  background-color: #eaf3ff;
+  color: #007bff;
+  border-radius: 8px;
+}
+
+/* Active Group Styling */
+.active-group {
+  background-color: #d8ebff;
+  color: #007bff;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* Sidebar Group Items */
+.sidebar-group-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px; /* Adjust indentation for nested items */
+  border-left: 2px solid transparent; /* Add a border to mimic the left line */
+}
+
+/* Sidebar Item */
+.sidebar-item {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  position: relative; /* Relative positioning for left line styling */
+}
+
+/* Left Line Indicator on Active or Hover */
+.sidebar-item:hover,
+.sidebar-item.active {
+  color: #007bff; /* Highlighted text color */
+  background-color: #f0f4ff; /* Light background color */
+  padding-left: 18px; /* Indentation adjustment for hover */
+  border-left: 2px solid #007bff; /* Add left line for hover and active states */
+  border-radius: 0 4px 4px 0; /* Rounded corners for hover effect */
+}
+
+/* Left Line for Active State */
+.sidebar-item.active {
+  font-weight: bold; /* Stronger emphasis on active item */
+  border-left: 3px solid #007bff; /* Slightly thicker line for active state */
+  background-color: #e6f7ff; /* Light blue background for active */
+}
+
+/* Logout Button */
+.logout-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 20px 15px 0 15px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.logout-button:hover {
+  color: #ffb700;
+}
+
+.logout-button .icon {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* Scrollbar for Sidebar */
+.sidebar-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background-color: #d4d4d4;
+  border-radius: 4px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb:hover {
+  background-color: #b4b4b4;
+}

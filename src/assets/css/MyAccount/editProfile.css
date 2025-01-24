@@ -1,0 +1,286 @@
+/* Main wrapper */
+.profile-edit-wrapper {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.profile-edit-heading {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Form */
+.profile-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form group for image upload */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-upload-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-upload-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.edit-profile-avatar,
+.info-profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.edit-input-field:focus ~ .form-label-name,
+.edit-input-field:not(:placeholder-shown) ~ .form-label-name,
+.edit-input-field:focus ~ .form-label-email,
+.edit-input-field:not(:placeholder-shown) ~ .form-label-email {
+  top: -10px;
+  left: 35px;
+  font-size: 12px;
+  color: #333;
+  background-color: #fff;
+  padding: 0 5px;
+  border-radius: 4px;
+}
+.form-label-name,
+.form-label-email {
+  position: absolute;
+  top: 12px;
+  left: 40px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+.profile-image-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.image-upload-label {
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Input Fields */
+.edited-profile-form-group {
+  position: relative;
+}
+
+.edit-input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+  font-size: 18px;
+}
+
+.edit-input-field {
+  width: 100%;
+  padding: 12px 12px 12px 36px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.edit-input-field:focus {
+  border-color: #f5bc00;
+  box-shadow: 0 0 6px #f5bc00;
+}
+
+.form-label {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #000;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .profile-edit-wrapper {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .profile-edit-heading {
+    font-size: 22px;
+  }
+
+  .edit-input-field {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .image-upload-container {
+    margin-bottom: 15px;
+  }
+
+  .profile-image-preview {
+    width: 100px;
+    height: 100px;
+  }
+
+  .edit-profile-avatar,
+  .info-profile-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-edit-wrapper {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  .profile-edit-heading {
+    font-size: 20px;
+  }
+
+  .edit-input-field {
+    font-size: 14px;
+    padding: 8px 12px 8px 30px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .image-upload-container {
+    margin-bottom: 10px;
+  }
+
+  .profile-image-preview {
+    width: 80px;
+    height: 80px;
+  }
+
+  .edit-profile-avatar,
+  .info-profile-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-edit-wrapper {
+    padding: 10px;
+  }
+
+  .profile-edit-heading {
+    font-size: 18px;
+  }
+
+  .edit-input-field {
+    font-size: 12px;
+    padding: 8px 10px 8px 30px;
+  }
+
+  .submit-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .profile-image-preview {
+    width: 70px;
+    height: 70px;
+  }
+
+  .edit-profile-avatar,
+  .info-profile-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-edit-wrapper {
+    padding: 8px;
+  }
+
+  .profile-edit-heading {
+    font-size: 16px;
+  }
+
+  .edit-input-field {
+    font-size: 10px;
+    padding: 6px 8px 6px 25px;
+  }
+
+  .submit-btn {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .profile-image-preview {
+    width: 60px;
+    height: 60px;
+  }
+
+  .edit-profile-avatar,
+  .info-profile-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}

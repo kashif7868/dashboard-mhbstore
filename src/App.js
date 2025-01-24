@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomeDashboard from "./pages/HomeDashboard";
+import Dashboard from "./pages/Dashboard";
+import Auth from "./components/auth/AuthPage";
+import { ThemeProvider } from "./context/ThemeContext";
+import PrivateRoute from "./components/PrivateRoute"; // Import PrivateRoute
+import AllPages from "./components/AllPages"; // Import AllPages
+import { AuthProvider } from "./context/authContext"; // Import AuthProvider
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      {/* Wrap Router around everything including AuthProvider */}
+      <Router>
+        <AuthProvider> {/* Move AuthProvider inside Router */}
+          <Routes>
+            <Route path="/auth" element={<Auth />} />
+
+            {/* Protected Dashboard Route */}
+            <Route path="/" element={<PrivateRoute element={<Dashboard />} />}>
+              <Route index element={<HomeDashboard />} />
+
+              {/* Catch-all Route for AllPages */}
+              <Route path="/*" element={<AllPages />} />
+            </Route>
+          </Routes>
+        </AuthProvider>
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

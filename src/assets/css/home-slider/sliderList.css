@@ -1,0 +1,154 @@
+/* Slider List CSS */
+
+.slider-list-page {
+  padding: 20px;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  color: #5f6368;
+}
+
+.arrow-icon {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.slider-list-container {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header container: flexbox layout for left and right sides */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Left side (title) */
+.list-slider-banner-header h6 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Right side: search bar and add slider button */
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between search bar and add slider button */
+}
+
+/* Search Bar with Icon */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 12px; /* Add padding to leave space for the icon */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #6200ea;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  color: #6200ea;
+  pointer-events: none;
+}
+
+/* Add Slider Button */
+.add-slider-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.add-slider-btn {
+  background-color: #6200ea;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-slider-btn:hover {
+  background-color: #3700b3;
+}
+
+.slider-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.edit-button {
+  background-color: #6200ea;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.edit-button:hover {
+  background-color: #3700b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 20px;
+}
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #6200ea;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,107 @@
+/* General Styles */
+.dashboard-cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  margin-top: 20px; /* Add top margin for spacing */
+}
+
+.dashboard-card {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Adjust width for row layout */
+  height: 180px; /* Fixed height for better layout */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition on hover */
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slight hover effect */
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  width: 65%; /* Allocate more space for the text and chart */
+}
+
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px; /* Space between elements */
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px; /* Add spacing between icon and text */
+}
+
+.dashboard-card h4 {
+  font-size: 16px;
+  color: #374151;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dashboard-card .value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.dashboard-card .percentage {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.dashboard-card .percentage.positive {
+  color: #16a34a;
+}
+
+.dashboard-card .percentage.negative {
+  color: #dc2626;
+}
+
+.chart-section {
+  width: 35%; /* Allocate remaining space for the chart */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-section canvas {
+  width: 100%;
+  height: 100% !important; /* Ensure the chart fills the container */
+}
+
+.weekend-container {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Padding for spacing */
+}
+
+.weekend-chart {
+  width: 100%;
+  max-width: 200px; 
+  padding: 0px 05px;
+}
+

@@ -1,0 +1,289 @@
+.product-add-container-page {
+  width: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Content */
+.content {
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #ffb700;
+}
+
+.product-add-container {
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+/* Heading */
+.product-add-heading {
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Main form layout */
+.product-add-form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Left side: Product details */
+.product-left-side-container {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.form-group-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows the form elements to wrap on smaller screens */
+  justify-content: space-between; /* Distributes space evenly between elements */
+}
+
+.form-group {
+  flex: 1 1 calc(50% - 10px); /* Each form group takes up half the width minus some gap space */
+  min-width: 200px; /* Ensures the form group doesn't become too narrow on small screens */
+  margin-bottom: 15px; /* Adds space between rows */
+}
+
+.product-info-form label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000;
+  font-size: 1rem;
+}
+
+.product-info-form input,
+.product-info-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+/* Focused state and placeholder handling */
+.product-info-form input:focus,
+.product-info-form textarea:focus,
+.product-info-form input:not(:placeholder-shown),
+.product-info-form textarea:not(:placeholder-shown) {
+  border-color: #000;
+  outline: none;
+}
+
+.product-info-form input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+.product-info-form textarea {
+  min-height: 120px;
+  resize: vertical; /* Allows users to resize the textarea */
+}
+
+.product-info-form button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.product-info-form button:hover {
+  background-color: #333;
+}
+
+/* Right side: Product images */
+.product-right-side-container {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.product-right-side-container h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.image-upload {
+  margin-bottom: 20px;
+  width: 100%;
+  border: 2px dashed #007bff; /* Blue dashed border */
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px; /* Space between text and icon */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.image-upload:hover {
+  background-color: #fafafa; /* Light hover background */
+  border-color: #0056b3; /* Darker blue border on hover */
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-upload-label {
+  font-size: 1rem;
+  color: #007bff; /* Blue text color */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.file-upload-label:hover {
+  color: #0056b3; /* Darker blue text on hover */
+}
+
+.file-upload-icon {
+  font-size: 2rem; /* Larger icon */
+}
+
+.file-upload-label span {
+  font-size: 0.9rem;
+  color: #6c757d; /* Gray text for instruction */
+}
+
+.file-upload-label span:hover {
+  color: #0056b3; /* Darker gray text on hover */
+}
+
+.image-upload input:hover {
+  background-color: #e9ecef;
+}
+
+.image-preview ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.image-preview li {
+  position: relative;
+  max-width: 120px;
+  max-height: 120px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-preview li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.remove-image-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.product-images-note {
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-family: "Arial", sans-serif; /* Clean and readable font */
+}
+
+.product-images-note p {
+  font-size: 1rem;
+  line-height: 1.6; /* Improve readability with increased line height */
+  color: #495057; /* Darker gray text color for readability */
+  margin: 0;
+  text-align: justify;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .product-add-form {
+    grid-template-columns: 1fr;
+  }
+
+  .product-add-heading {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .form-group-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .product-info-form input,
+  .product-info-form textarea {
+    padding: 10px;
+  }
+
+  .product-info-form button {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .image-preview ul {
+    justify-content: center;
+  }
+}

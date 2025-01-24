@@ -1,0 +1,206 @@
+.add-home-slider-page {
+    width: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  /* Content */
+  .content {
+    margin-bottom: 20px;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    color: #ffb700;
+  }
+
+.home-slider-container {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+}
+
+.slider-card {
+    padding: 30px;
+    width: 100%;
+}
+
+.slider-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.slider-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-control, .form-control-textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.form-control:focus, .form-control-textarea:focus {
+    border-color: #ffb700;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(255, 183, 0, 0.5);
+}
+
+.form-label {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    font-size: 16px;
+    color: #777;
+    transition: top 0.2s, font-size 0.2s;
+    pointer-events: none;
+    padding: 0 4px;
+    background-color: #fff;
+}
+
+.form-control:focus + .form-label,
+.form-control-textarea:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label,
+.form-control-textarea:not(:placeholder-shown) + .form-label {
+    top: -10px;
+    font-size: 12px;
+    color: #ffb700;
+}
+
+.form-control::placeholder, .form-control-textarea::placeholder {
+    color: #aaa;
+    font-size: 16px;
+    opacity: 1;
+}
+
+.form-control:focus::placeholder, .form-control-textarea:focus::placeholder {
+    color: transparent;
+}
+
+.form-control-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.upload-label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.upload-icon {
+    margin-right: 12px;
+}
+
+.file-input {
+    display: none;
+}
+
+.image-preview-container {
+    margin-top: 12px;
+    text-align: center;
+    max-width: 100%;
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.publish-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.publish-label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.publish-checkbox {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #e6a500;
+}
+
+.publish-icon {
+    margin-right: 10px;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}

@@ -1,0 +1,25 @@
+.list-page {
+  width: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Content */
+.content {
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #ffb700;
+}

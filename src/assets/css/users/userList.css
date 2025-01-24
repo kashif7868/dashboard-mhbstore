@@ -1,0 +1,41 @@
+
+  
+  /* User Photo */
+  .user-list-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f1f1f1;
+    color: #000;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .user-list-photo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Loading Spinner */
+  .user-list-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  /* Error Message */
+  .user-list-error {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,17 @@
+.dashboard-container-main-wrapper {
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.dashboard-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-section-content {
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+}

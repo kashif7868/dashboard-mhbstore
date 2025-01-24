@@ -1,0 +1,98 @@
+.sale-category {
+  padding: 20px;
+  width: 100%;
+  max-width: 16em;
+  margin: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 438px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header h3 {
+  font-size: 1rem; /* 16px */
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.header .options {
+  font-size: 1.25rem; /* 20px */
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.date-range {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.875rem; /* 14px */
+  color: #6b7280;
+}
+
+.summary {
+  width: 100%;
+  text-align: center;
+}
+
+.summary h1 {
+  font-size: 1.75rem; /* 28px */
+  font-weight: bold;
+  color: #1f2937;
+  margin: 5px 0;
+}
+
+.summary .growth {
+  font-size: 0.875rem; /* 14px */
+  color: #10b981;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.summary .growth .arrow {
+  font-size: 0.75rem; /* 12px */
+}
+
+.recharts-tooltip-wrapper {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.legend .circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.mens-color {
+  background-color: #93c5fd;
+}
+
+.womens-color {
+  background-color: #2563eb;
+}

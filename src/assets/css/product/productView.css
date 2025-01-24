@@ -1,0 +1,396 @@
+.product-view-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rem;
+  padding: 4rem 6em;
+  background-color: #fff;
+  align-items: flex-start;
+}
+
+/* Left: Product Images */
+.product-images-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-details-contant-info {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main-product-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.thumbnail:hover,
+.thumbnail-active {
+  border-color: #ffc107;
+  transform: scale(1.1);
+}
+
+/* Right: Product Details */
+.product-details-section {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.product-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+.product-reviews-section {
+  display: flex;
+  align-items: center;
+}
+
+.stars-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.star {
+  color: #ddd;
+  font-size: 1.2rem;
+}
+
+.star-filled {
+  color: #ffc107;
+}
+
+.product-price-section {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.old-price {
+  color: #999;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.current-price {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* Colors */
+.color-options-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.color-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.color-box {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.color-box:hover {
+  transform: scale(1.1);
+  border-color: #ffc107;
+}
+
+.color-active {
+  border: 2px solid #000;
+  transform: scale(1.1);
+}
+
+/* Sizes */
+.size-options-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.size-options-section select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Meters */
+.meter-options-section select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Action Buttons */
+.action-buttons-section {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.add-cart-btn,
+.buy-now-btn {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-cart-btn:hover,
+.buy-now-btn:hover {
+  background-color: #ffc107;
+  transform: translateY(-2px);
+}
+
+/* Related Products */
+.related-products-section {
+  flex-basis: 100%;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.related-products-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.related-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.related-product-card {
+  background-color: #ffffff;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-product-card:hover {
+  transform: translateY(-5px);
+}
+
+.related-product-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
+
+.related-product-card:hover .related-product-img {
+  transform: scale(1.05);
+}
+
+.related-product-info {
+  text-align: left;
+  margin: 0.5em 0em;
+}
+
+.related-product-name {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.related-product-price {
+  font-size: 1rem;
+  color: #000;
+  display: flex;
+  gap: 0.3rem;
+  align-items: baseline;
+}
+
+.related-product-old-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.related-product-current-price {
+  font-size: 1rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.related-product-rating {
+  margin: 0.3rem 0;
+}
+
+/* Responsive styles for screen sizes between 1024px and 300px */
+@media (max-width: 1024px) and (min-width: 300px) {
+  /* Adjust container layout */
+  .product-view-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  /* Images Section */
+  .product-images-section {
+    flex: 1 1 100%;
+    align-items: flex-start;
+  }
+
+  .main-product-image {
+    max-width: 100%;
+  }
+
+  .thumbnail-container {
+    justify-content: flex-start;
+    gap: 0.3rem;
+  }
+
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Details Section */
+  .product-details-section {
+    flex: 1 1 100%;
+  }
+  .product-details-contant-info {
+    position: relative;
+    left: 24px;
+  }
+  .product-title {
+    font-size: 1.8rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+  .stars-container .star {
+    font-size: 1rem;
+  }
+
+  .product-price-section {
+    font-size: 1rem;
+  }
+
+  .old-price {
+    font-size: 0.9rem;
+  }
+
+  .current-price {
+    font-size: 1.2rem;
+  }
+
+  /* Action Buttons */
+  .action-buttons-section {
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    left: 22px;
+  }
+
+  .add-cart-btn,
+  .buy-now-btn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Color Options */
+  .color-box {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Size and Meter Options */
+  .size-options-section select,
+  .meter-options-section select {
+    font-size: 0.9rem;
+  }
+
+  /* Related Products Section */
+  .related-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .related-product-card {
+    padding: 0.8rem;
+  }
+
+  .related-product-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .related-product-name {
+    font-size: 0.75rem;
+  }
+
+  .related-product-price {
+    font-size: 0.85rem;
+  }
+
+  .related-product-old-price {
+    font-size: 0.75rem;
+  }
+
+  .related-product-current-price {
+    font-size: 0.9rem;
+  }
+}

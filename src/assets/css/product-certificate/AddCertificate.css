@@ -1,0 +1,148 @@
+.add-certificate-page {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Content */
+.content {
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #ffb700;
+}
+
+.add-certificate-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* Make sure the container fills the height of the page */
+  margin: 0 auto;
+}
+
+.certificate-form-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 800px; /* Limit the max width for better readability */
+}
+
+.add-certificate-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-certificate-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #f39c12;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #7f8c8d;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus + .input-label,
+.textarea-field:focus + .input-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -1px;
+  font-size: 0.8rem;
+  color: #f39c12;
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-button {
+  background-color: #000;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #f39c12;
+}
+
+.choose-image-button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.choose-image-button:hover {
+  background-color: #f39c12;
+}
+
+.image-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.preview-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}

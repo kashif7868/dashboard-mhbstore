@@ -1,0 +1,121 @@
+/* General container styling */
+.notification-details__container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notification-details__title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Back button styling */
+  .notification-details__back-button {
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .notification-details__back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Notification card styles */
+  .notification-details__card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notification-details__item {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  
+  .notification-details__item strong {
+    font-weight: bold;
+  }
+  
+  /* Message section (allow text to wrap properly) */
+  .notification-details__item p {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  /* Divider between content and footer */
+  .notification-details__divider {
+    border: 1px solid #eee;
+    margin: 20px 0;
+  }
+  
+  /* Footer section */
+  .notification-details__footer {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  /* Loading state styles */
+  .notification-details__loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+  
+  .notification-details__loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Animation for loader */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .notification-details__container {
+      padding: 15px;
+    }
+  
+    .notification-details__title {
+      font-size: 1.5rem;
+    }
+  
+    .notification-details__back-button {
+      font-size: 0.9rem;
+    }
+  
+    .notification-details__item {
+      font-size: 0.95rem;
+    }
+  
+    .notification-details__footer {
+      font-size: 0.85rem;
+    }
+  }
+  

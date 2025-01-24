@@ -1,0 +1,119 @@
+/* General styling for the table container */
+.recent-orders-table {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: Arial, sans-serif; /* Clean font */
+}
+
+/* Header styling */
+.recent-orders-table .table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.recent-orders-table .table-header h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.recent-orders-table .table-header .view-all-link {
+  font-size: 14px;
+  color: #007bff; /* Blue link */
+  text-decoration: none;
+}
+
+.recent-orders-table .table-header .view-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Table styling */
+.data-table-container {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table-container thead th {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555; /* Slightly muted */
+  border-bottom: 1px solid #e5e5e5; /* Bottom border for header */
+  padding: 12px 8px;
+}
+
+.data-table-container tbody td {
+  font-size: 14px;
+  color: #333333; /* Text color for table rows */
+  padding: 12px 8px;
+  vertical-align: middle;
+}
+
+.data-table-container tbody tr {
+  border-bottom: 1px solid #f0f0f0; /* Subtle row separator */
+}
+
+.data-table-container tbody tr:hover {
+  background-color: #f9f9f9; /* Light hover effect */
+}
+
+/* Product column */
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Status styling */
+.status {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+  display: inline-block;
+}
+
+.status.delivered {
+  background-color: #d4edda; /* Green background */
+  color: #155724; /* Dark green text */
+}
+
+/* Pagination styling */
+.data-table-container-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.data-table-container-pagination .pagination-button {
+  background: none;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  color: #333333;
+  cursor: pointer;
+}
+
+.data-table-container-pagination .pagination-button:hover {
+  background-color: #f0f0f0;
+}
+
+.data-table-container-pagination .pagination-button.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+}

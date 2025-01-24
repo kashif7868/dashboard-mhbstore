@@ -1,0 +1,180 @@
+.add-category-page {
+  width: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Content */
+.content {
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #000; /* Text color */
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #3700b3; /* Link color */
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #3700b3 /* Hover effect */
+}
+
+/* Main container styling */
+.add-category-container {
+  background-color: #fff;
+  margin: 0px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-right: 40px;
+}
+
+/* Heading style */
+.category-heading {
+  font-size: 24px;
+  color: #000; /* Black text */
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+
+/* Form container layout */
+.add-category-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form detail container */
+.form-dt-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Flex styling for input groups */
+.name-input-group,
+.image-upload-group,
+.color-select-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Title for each input group */
+.category-title {
+  font-size: 16px;
+  color: #000;
+  margin-right: 10px;
+  width: 100%;
+  max-width: 12em;
+}
+
+/* Color input styling */
+.input-color {
+  width: 40px;
+  height: 40px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Image preview */
+.image-preview {
+  margin-top: 10px;
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Input and select field styles */
+.input-color,
+.input-name {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #000;
+  width: 100%;
+}
+
+.input-name:focus,
+.input-color:focus {
+  outline: none;
+  border-color: #3700b3; 
+}
+
+.category-image-upload-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #3700b3;
+  border-radius: 8px;
+  padding: 100px 380px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.category-image-upload-container:hover {
+  border-color: #4a90e2;
+}
+
+.input-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-text .upload-icon {
+  font-size: 3rem;
+  color: #3700b3;
+  transition: color 0.3s ease;
+}
+
+.upload-icon:hover {
+  color: rgb(92, 159, 235);
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: 10px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+input[type="file"]:focus ~ .upload-icon {
+  color: #4a90e2;
+}
+
+.form-actions {
+  margin-left: 14em;
+}
+/* Button styling */
+.add-category-btn {
+  background-color: #3700b3; /* Black button background */
+  color: #fff; /* White text */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.add-category-btn:hover {
+  background-color: #4104cf; /* Darker black on hover */
+}

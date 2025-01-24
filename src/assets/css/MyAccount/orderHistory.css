@@ -1,0 +1,240 @@
+/* Main container */
+.order-history-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #fff;
+  color: #000;
+}
+
+.order-history-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  color: #333;
+}
+
+/* Date Filter */
+.date-filter {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.date-filter select {
+  padding: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.date-filter select:hover {
+  background-color: #f0f0f0;  /* Light gray on hover */
+}
+
+.date-filter label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Table styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.data-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data-table tr:hover {
+  background-color: #e0e0e0; /* Light gray on row hover */
+  cursor: pointer;
+}
+
+/* Order summary section */
+.order-summary {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.order-summary p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Section for individual orders */
+.order-list {
+  margin-top: 20px;
+}
+
+.order-list p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 1024px) {
+  .order-history-container {
+    padding: 15px;
+  }
+
+  .order-history-title {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .date-filter {
+    text-align: left;
+  }
+
+  .date-filter select {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-history-container {
+    padding: 10px;
+  }
+
+  .order-history-title {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .date-filter {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  .date-filter select {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .order-summary p {
+    font-size: 12px;
+  }
+
+  .order-list p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-history-container {
+    padding: 8px;
+  }
+
+  .order-history-title {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .date-filter {
+    text-align: center;
+  }
+
+  .date-filter select {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .order-summary p {
+    font-size: 10px;
+  }
+
+  .order-list p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .order-history-container {
+    padding: 5px;
+  }
+
+  .order-history-title {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .date-filter {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .date-filter select {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .order-summary p {
+    font-size: 8px;
+  }
+
+  .order-list p {
+    font-size: 10px;
+  }
+}
