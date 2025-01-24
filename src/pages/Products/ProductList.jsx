@@ -41,7 +41,7 @@ const ProductList = () => {
       selector: (row) => (
         <img
           src={
-            row.images?.[0] ? `http://localhost:8000/${row.images[0]}` : ""
+            row.images?.[0] ? `https://api.mhbstore.com/${row.images[0]}` : ""
           }
           alt={row.productName}
           className="product-image"

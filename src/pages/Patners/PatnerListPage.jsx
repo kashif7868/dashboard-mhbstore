@@ -47,7 +47,7 @@ const PatnerListPage = () => {
       selector: (row) => row.partnerImage,
       cell: (row) => (
         <img
-          src={`http://localhost:8000/${row.partnerImage}`}
+          src={`https://api.mhbstore.com/${row.partnerImage}`}
           alt={row.partnerName}
           width="50"
           height="50"
@@ -65,7 +65,7 @@ const PatnerListPage = () => {
         <img
           src={
             row.productImages && row.productImages.length > 0
-              ? `http://localhost:8000/${row.productImages[0]}`
+              ? `https://api.mhbstore.com/${row.productImages[0]}`
               : "default_image_url"
           }
           alt={row.productName}

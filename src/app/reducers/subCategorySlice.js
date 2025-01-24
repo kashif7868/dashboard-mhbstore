@@ -8,7 +8,7 @@ export const fetchSubCategories = createAsyncThunk(
   'subcategories/fetchAll',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get('http://localhost:8000/api/subcategory'); // Ensure the API endpoint is correct
+      const response = await axios.get('https://api.mhbstore.com/api/subcategory'); // Ensure the API endpoint is correct
       console.log('Fetched Subcategories:', response.data);  // Log the response to check the structure
       if (response.data && Array.isArray(response.data)) {
         return response.data; // Directly return the array
@@ -27,7 +27,7 @@ export const fetchSubCategoryById = createAsyncThunk(
   'subcategories/fetchById',
   async (id, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/subcategory/${id}`);
+      const response = await axios.get(`https://api.mhbstore.com/api/subcategory/${id}`);
       if (response.data && response.data.data) {
         return response.data.data;
       } else {
@@ -45,7 +45,7 @@ export const addSubCategory = createAsyncThunk(
   'subcategories/add',
   async (subCategoryData, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:8000/api/subcategory', subCategoryData, {
+      const response = await axios.post('https://api.mhbstore.com/api/subcategory', subCategoryData, {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.data && response.data.data) {
@@ -65,7 +65,7 @@ export const deleteSubCategory = createAsyncThunk(
   'subcategories/delete',
   async (id, { rejectWithValue }) => {
     try {
-      await axios.delete(`http://localhost:8000/api/subcategory/${id}`);
+      await axios.delete(`https://api.mhbstore.com/api/subcategory/${id}`);
       return id;
     } catch (error) {
       console.error(error);
@@ -79,7 +79,7 @@ export const updateSubCategory = createAsyncThunk(
   'subcategories/update',
   async ({ id, updatedData }, { rejectWithValue }) => {
     try {
-      const response = await axios.patch(`http://localhost:8000/api/subcategory/${id}`, updatedData, {
+      const response = await axios.patch(`https://api.mhbstore.com/api/subcategory/${id}`, updatedData, {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.data && response.data.data) {

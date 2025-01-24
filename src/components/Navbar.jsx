@@ -156,7 +156,7 @@ const Navbar = () => {
         <div className="profile-info" onClick={handleProfileMenuToggle}>
           {user?.image ? (
             <img
-              src={`http://localhost:8000/${user.image}`}
+              src={`https://api.mhbstore.com/${user.image}`}
               alt={user.fullName || "User"}
               className="profile-image"
             />

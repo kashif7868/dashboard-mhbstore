@@ -6,7 +6,7 @@ export const createNotification = createAsyncThunk(
   'notification/create',
   async (notificationData, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:8000/api/notifications/create', notificationData);
+      const response = await axios.post('https://api.mhbstore.com/api/notifications/create', notificationData);
       return response.data.notification;
     } catch (error) {
       return rejectWithValue(error.response.data.message);
@@ -19,7 +19,7 @@ export const getAllNotifications = createAsyncThunk(
   'notification/getAll',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get('http://localhost:8000/api/notifications');
+      const response = await axios.get('https://api.mhbstore.com/api/notifications');
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data.message);
@@ -32,7 +32,7 @@ export const getNotificationById = createAsyncThunk(
   'notification/getById',
   async (id, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/notifications/${id}`);
+      const response = await axios.get(`https://api.mhbstore.com/api/notifications/${id}`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data.message);
@@ -45,7 +45,7 @@ export const updateNotification = createAsyncThunk(
   'notification/update',
   async ({ id, updateData }, { rejectWithValue }) => {
     try {
-      const response = await axios.patch(`http://localhost:8000/api/notifications/${id}`, updateData);
+      const response = await axios.patch(`https://api.mhbstore.com/api/notifications/${id}`, updateData);
       return response.data.notification;
     } catch (error) {
       return rejectWithValue(error.response.data.message);
@@ -58,7 +58,7 @@ export const deleteNotification = createAsyncThunk(
   'notification/delete',
   async (id, { rejectWithValue }) => {
     try {
-      await axios.delete(`http://localhost:8000/api/notifications/${id}`);
+      await axios.delete(`https://api.mhbstore.com/api/notifications/${id}`);
       return id; // Return the ID to be deleted
     } catch (error) {
       return rejectWithValue(error.response.data.message);
@@ -72,7 +72,7 @@ export const toggleNotificationStatus = createAsyncThunk(
   async ({ id, currentStatus }, { rejectWithValue }) => {
     try {
       const newStatus = currentStatus === 'Unread' ? 'Read' : 'Unread'; // Toggle between Unread and Read
-      const response = await axios.patch(`http://localhost:8000/api/notifications/${id}`, { status: newStatus });
+      const response = await axios.patch(`https://api.mhbstore.com/api/notifications/${id}`, { status: newStatus });
       return response.data.notification;
     } catch (error) {
       return rejectWithValue(error.response.data.message);
@@ -85,7 +85,7 @@ export const markNotificationsAsRead = createAsyncThunk(
   'notification/markAsRead',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.patch('http://localhost:8000/api/notifications/mark-as-read');
+      const response = await axios.patch('https://api.mhbstore.com/api/notifications/mark-as-read');
       return response.data.notifications; // Assuming the server returns the updated notifications
     } catch (error) {
       return rejectWithValue(error.response.data.message);

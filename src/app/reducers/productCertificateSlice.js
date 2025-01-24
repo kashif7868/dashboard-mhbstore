@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // API URL
-const apiUrl = 'http://localhost:8000/api/certificates';
+const apiUrl = 'https://api.mhbstore.com/api/certificates';
 
 // Initial state for the slice
 const initialState = {

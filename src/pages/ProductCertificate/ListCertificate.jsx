@@ -65,7 +65,7 @@ const ListCertificate = () => {
       width: 150,
       renderCell: (params) => (
         <img
-          src={`http://localhost:8000/${params.row.image}`}
+          src={`https://api.mhbstore.com/${params.row.image}`}
           alt={params.row.name}
           style={{
             width: "100px",

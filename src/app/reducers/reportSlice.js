@@ -2,14 +2,14 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Asynchronous thunk to fetch the report data
 export const fetchReport = createAsyncThunk('report/fetchReport', async () => {
-  const response = await fetch('http://localhost:8000/api/reports');
+  const response = await fetch('https://api.mhbstore.com/api/reports');
   const data = await response.json();
   return data;
 });
 
 // Asynchronous thunk to update the report data
 export const updateReport = createAsyncThunk('report/updateReport', async (reportData) => {
-  const response = await fetch('http://localhost:8000/api/reports', {
+  const response = await fetch('https://api.mhbstore.com/api/reports', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

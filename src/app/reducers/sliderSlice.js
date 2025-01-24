@@ -6,7 +6,7 @@ export const createSliderAsync = createAsyncThunk(
   'sliders/createSliderAsync',
   async (sliderData, thunkAPI) => {
     try {
-      const response = await axios.post('http://localhost:8000/api/homeslider', sliderData);
+      const response = await axios.post('https://api.mhbstore.com/api/homeslider', sliderData);
       return response.data.data; // Assuming response.data contains 'data' with the newly created slider
     } catch (error) {
       return thunkAPI.rejectWithValue('Failed to create slider');
@@ -19,7 +19,7 @@ export const fetchSlidersAsync = createAsyncThunk(
   'sliders/fetchSlidersAsync',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('http://localhost:8000/api/homeslider');
+      const response = await axios.get('https://api.mhbstore.com/api/homeslider');
       return response.data.data; // Assuming response.data contains 'data' with the sliders
     } catch (error) {
       return thunkAPI.rejectWithValue('Failed to fetch sliders');
@@ -32,7 +32,7 @@ export const fetchSliderByIdAsync = createAsyncThunk(
   'sliders/fetchSliderByIdAsync',
   async (sliderId, thunkAPI) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/homeslider/${sliderId}`);
+      const response = await axios.get(`https://api.mhbstore.com/api/homeslider/${sliderId}`);
       return response.data.data; // Assuming response.data contains 'data' with the slider details
     } catch (error) {
       return thunkAPI.rejectWithValue('Failed to fetch slider');
@@ -45,7 +45,7 @@ export const updateSliderAsync = createAsyncThunk(
   'sliders/updateSliderAsync',
   async ({ sliderId, updatedData }, thunkAPI) => {
     try {
-      const response = await axios.patch(`http://localhost:8000/api/homeslider/${sliderId}`, updatedData);
+      const response = await axios.patch(`https://api.mhbstore.com/api/homeslider/${sliderId}`, updatedData);
       return response.data.data; // Assuming response.data contains 'data' with the updated slider
     } catch (error) {
       return thunkAPI.rejectWithValue('Failed to update slider');
@@ -58,7 +58,7 @@ export const deleteSliderAsync = createAsyncThunk(
   'sliders/deleteSliderAsync',
   async (sliderId, thunkAPI) => {
     try {
-      await axios.delete(`http://localhost:8000/api/homeslider/${sliderId}`);
+      await axios.delete(`https://api.mhbstore.com/api/homeslider/${sliderId}`);
       return sliderId; // Return the ID of the slider that was deleted
     } catch (error) {
       return thunkAPI.rejectWithValue('Failed to delete slider');

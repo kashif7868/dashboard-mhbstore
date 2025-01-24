@@ -3,14 +3,14 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // Async thunk to fetch all ads
 export const fetchAds = createAsyncThunk("ads/fetchAds", async () => {
-  const response = await fetch("http://localhost:8000/api/ads");
+  const response = await fetch("https://api.mhbstore.com/api/ads");
   const data = await response.json();
   return data;
 });
 
 // Async thunk to create a new ad
 export const createAd = createAsyncThunk("ads/createAd", async (formData) => {
-  const response = await fetch("http://localhost:8000/api/ads", {
+  const response = await fetch("https://api.mhbstore.com/api/ads", {
     method: "POST",
     body: formData,
   });
@@ -20,14 +20,14 @@ export const createAd = createAsyncThunk("ads/createAd", async (formData) => {
 
 // Async thunk to fetch ad by ID
 export const fetchAdById = createAsyncThunk("ads/fetchAdById", async (id) => {
-  const response = await fetch(`http://localhost:8000/api/ads/${id}`);
+  const response = await fetch(`https://api.mhbstore.com/api/ads/${id}`);
   const data = await response.json();
   return data;
 });
 
 // Async thunk to update an ad
 export const updateAd = createAsyncThunk("ads/updateAd", async ({ id, formData }) => {
-  const response = await fetch(`http://localhost:8000/api/ads/${id}`, {
+  const response = await fetch(`https://api.mhbstore.com/api/ads/${id}`, {
     method: "PATCH",
     body: formData,
   });
@@ -37,7 +37,7 @@ export const updateAd = createAsyncThunk("ads/updateAd", async ({ id, formData }
 
 // Async thunk to delete an ad
 export const deleteAd = createAsyncThunk("ads/deleteAd", async (id) => {
-  const response = await fetch(`http://localhost:8000/api/ads/${id}`, {
+  const response = await fetch(`https://api.mhbstore.com/api/ads/${id}`, {
     method: "DELETE",
   });
   const data = await response.json();

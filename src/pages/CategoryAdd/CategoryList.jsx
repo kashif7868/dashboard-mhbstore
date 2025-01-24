@@ -79,7 +79,7 @@ const CategoryList = () => {
       cell: (row) => (
         <div className="category-image-container">
           <img
-            src={`http://localhost:8000/${row.image
+            src={`https://api.mhbstore.com/${row.image
               .replace("public\\", "")
               .replace(/\\/g, "/")}`}
             alt={row.categoryName}

@@ -4,12 +4,12 @@ import axios from 'axios';
 // Define individual API URLs for each category-related operation
 
 // API URLs for categories
-const GET_CATEGORIES_URL = 'http://localhost:8000/api/categories';
-const GET_CATEGORY_BY_ID_URL = (categoryId) => `http://localhost:8000/api/categories/${categoryId}`;
-const CREATE_CATEGORY_URL = 'http://localhost:8000/api/categories';
-const UPDATE_CATEGORY_URL = (categoryId) => `http://localhost:8000/api/categories/${categoryId}`;
-const DELETE_CATEGORY_URL = (categoryId) => `http://localhost:8000/api/categories/${categoryId}`;
-const UPDATE_CATEGORY_STATUS_URL = (categoryId) => `http://localhost:8000/api/categories/${categoryId}`;
+const GET_CATEGORIES_URL = 'https://api.mhbstore.com/api/categories';
+const GET_CATEGORY_BY_ID_URL = (categoryId) => `https://api.mhbstore.com/api/categories/${categoryId}`;
+const CREATE_CATEGORY_URL = 'https://api.mhbstore.com/api/categories';
+const UPDATE_CATEGORY_URL = (categoryId) => `https://api.mhbstore.com/api/categories/${categoryId}`;
+const DELETE_CATEGORY_URL = (categoryId) => `https://api.mhbstore.com/api/categories/${categoryId}`;
+const UPDATE_CATEGORY_STATUS_URL = (categoryId) => `https://api.mhbstore.com/api/categories/${categoryId}`;
 
 // Create async thunk for fetching all categories
 export const fetchCategories = createAsyncThunk('category/fetchCategories', async () => {

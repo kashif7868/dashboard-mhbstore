@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Thunks for fetching, updating, and deleting users
 export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
-  const response = await axios.get('http://localhost:8000/api/auth/');
+  const response = await axios.get('https://api.mhbstore.com/api/auth/');
   // Map data to required format with sequential IDs
   const usersWithSequentialId = response.data.results.map((user, index) => ({
     id: index + 1,  // Sequential ID
@@ -15,12 +15,12 @@ export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
 });
 
 export const deleteUser = createAsyncThunk('users/deleteUser', async (userId) => {
-  await axios.delete(`http://localhost:8000/api/auth/users/${userId}`);
+  await axios.delete(`https://api.mhbstore.com/api/auth/users/${userId}`);
   return userId;  // Return userId to remove from state
 });
 
 export const updateUser = createAsyncThunk('users/updateUser', async ({ userId, userData }) => {
-  const { data } = await axios.patch(`http://localhost:8000/api/auth/users/${userId}`, userData);
+  const { data } = await axios.patch(`https://api.mhbstore.com/api/auth/users/${userId}`, userData);
   return data;  // Return the updated user data
 });
 

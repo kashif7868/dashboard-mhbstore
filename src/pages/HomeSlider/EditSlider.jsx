@@ -34,7 +34,7 @@ const EditSlider = () => {
     if (slider) {
       setAltText(slider.altText);
       setImage(slider.image);
-      setImageUrl(`http://localhost:8000/${slider.image.replace(/\\/g, "/")}`);
+      setImageUrl(`https://api.mhbstore.com/${slider.image.replace(/\\/g, "/")}`);
     }
   }, [slider]);
 

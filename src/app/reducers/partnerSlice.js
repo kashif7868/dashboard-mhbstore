@@ -10,17 +10,17 @@ const initialState = {
 
 // Thunks for async actions
 export const getAllPartners = createAsyncThunk('partners/getAll', async () => {
-  const response = await axios.get('http://localhost:8000/api/partners');
+  const response = await axios.get('https://api.mhbstore.com/api/partners');
   return response.data.data; // Assuming 'data' contains the list of partners
 });
 
 export const getPartnerById = createAsyncThunk('partners/getById', async (id) => {
-  const response = await axios.get(`http://localhost:8000/api/partners/${id}`);
+  const response = await axios.get(`https://api.mhbstore.com/api/partners/${id}`);
   return response.data; // Assuming the response contains the partner data
 });
 
 export const deletePartner = createAsyncThunk('partners/delete', async (id) => {
-  await axios.delete(`http://localhost:8000/api/partners/${id}`);
+  await axios.delete(`https://api.mhbstore.com/api/partners/${id}`);
   return id; // Return the id of the deleted partner
 });
 

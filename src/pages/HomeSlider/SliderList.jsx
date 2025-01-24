@@ -75,7 +75,7 @@ const SliderList = () => {
       name: "Slider",
       selector: (row) => (
         <img
-          src={`http://localhost:8000/${row.image.replace(/\\/g, "/")}`} // Update the image URL format
+          src={`https://api.mhbstore.com/${row.image.replace(/\\/g, "/")}`} // Update the image URL format
           className="slider-list__image"
           alt={row.altText} // Use altText as the alt attribute for image
           style={{ width: "100px", height: "auto" }}

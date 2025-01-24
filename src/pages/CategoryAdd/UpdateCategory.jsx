@@ -32,7 +32,7 @@ const UpdateCategory = () => {
       setCategoryName(currentCategory.categoryName);
       setStatusCategory(currentCategory.status);
       setImagePreview(
-        `http://localhost:8000/${currentCategory.image
+        `https://api.mhbstore.com/${currentCategory.image
           .replace("public\\", "")
           .replace(/\\/g, "/")}`
       );

@@ -14,7 +14,7 @@ export const createProduct = createAsyncThunk(
   "product/createProduct",
   async (productData, { rejectWithValue }) => {
     try {
-      const response = await axios.post("http://localhost:8000/api/products", productData, {
+      const response = await axios.post("https://api.mhbstore.com/api/products", productData, {
         headers: {
           "Content-Type": "multipart/form-data", // Ensure it's set for file uploads
         },
@@ -32,7 +32,7 @@ export const getAllProducts = createAsyncThunk(
   "product/getAllProducts",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get("http://localhost:8000/api/products");
+      const response = await axios.get("https://api.mhbstore.com/api/products");
       // Ensure that the response data is an array
       return response.data?.data || []; // If there's no `data` field, return an empty array
     } catch (error) {
@@ -49,7 +49,7 @@ export const getProductById = createAsyncThunk(
   async (productId, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/products/${productId}`
+        `https://api.mhbstore.com/api/products/${productId}`
       );
       return response.data; // Return the specific product
     } catch (error) {
@@ -66,7 +66,7 @@ export const updateProduct = createAsyncThunk(
   async ({ productId, productData }, { rejectWithValue }) => {
     try {
       const response = await axios.patch(
-        `http://localhost:8000/api/products/${productId}`,
+        `https://api.mhbstore.com/api/products/${productId}`,
         productData,
         {
           headers: {
@@ -88,7 +88,7 @@ export const deleteProduct = createAsyncThunk(
   "product/deleteProduct",
   async (productId, { rejectWithValue }) => {
     try {
-      await axios.delete(`http://localhost:8000/api/products/${productId}`);
+      await axios.delete(`https://api.mhbstore.com/api/products/${productId}`);
       return productId; // Return the deleted product ID
     } catch (error) {
       return rejectWithValue(

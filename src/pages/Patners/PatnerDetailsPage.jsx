@@ -13,7 +13,7 @@ const PatnerDetails = () => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `http://localhost:8000/api/partners/${partnerId}`
+          `https://api.mhbstore.com/api/partners/${partnerId}`
         );
         setPartner(response.data);
       } catch (err) {
@@ -47,7 +47,7 @@ const PatnerDetails = () => {
         <h3>Partner Information</h3>
         <div>
           <img
-            src={`http://localhost:8000/${partner.partnerImage}`}
+            src={`https://api.mhbstore.com/${partner.partnerImage}`}
             alt={partner.partnerName} // This might trigger the warning
             width="150"
             height="150"
@@ -89,7 +89,7 @@ const PatnerDetails = () => {
           {partner.productImages && partner.productImages.length > 0 ? (
             partner.productImages.map((image, index) => (
                 <img
-                src={`http://localhost:8000/${partner.partnerImage}`}
+                src={`https://api.mhbstore.com/${partner.partnerImage}`}
                 alt={partner.partnerName}  // Just the partner's name is enough as an alt description
                 width="150"
                 height="150"

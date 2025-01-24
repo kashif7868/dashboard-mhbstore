@@ -120,7 +120,7 @@ const Orders = () => {
         <div>
           {row.cart && row.cart[0]?.images && row.cart[0]?.images.length > 0 ? (
             <img
-              src={`http://localhost:8000/${row.cart[0].images[0]}`}
+              src={`https://api.mhbstore.com/${row.cart[0].images[0]}`}
               alt="Product"
               style={{ width: 50, height: 50, objectFit: "cover" }}
             />

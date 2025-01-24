@@ -19,7 +19,7 @@ const BasicInfo = () => {
           {/* If image exists, show the image; else show initials */}
           {userInfo.image ? (
             <img
-              src={`http://localhost:8000/${userInfo.image}`} // Use the uploaded image
+              src={`https://api.mhbstore.com/${userInfo.image}`} // Use the uploaded image
               alt={userInfo.fullName || "User"}
               className="profile-image"
             />

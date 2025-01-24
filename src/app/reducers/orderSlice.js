@@ -5,7 +5,7 @@ export const postOrder = createAsyncThunk(
   'order/postOrder',
   async (orderData, { rejectWithValue }) => {
     try {
-      const response = await fetch('http://localhost:8000/api/orders', {
+      const response = await fetch('https://api.mhbstore.com/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export const fetchOrderById = createAsyncThunk(
   'order/fetchOrderById',
   async (orderId, { rejectWithValue }) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/orders/${orderId}`);
+      const response = await fetch(`https://api.mhbstore.com/api/orders/${orderId}`);
 
       if (!response.ok) {
         throw new Error('Failed to fetch order');
@@ -47,7 +47,7 @@ export const fetchAllOrders = createAsyncThunk(
   'order/fetchAllOrders',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await fetch('http://localhost:8000/api/orders');
+      const response = await fetch('https://api.mhbstore.com/api/orders');
 
       if (!response.ok) {
         throw new Error('Failed to fetch orders');
@@ -66,7 +66,7 @@ export const deleteOrder = createAsyncThunk(
   'order/deleteOrder',
   async (orderId, { rejectWithValue }) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/orders/${orderId}`, {
+      const response = await fetch(`https://api.mhbstore.com/api/orders/${orderId}`, {
         method: 'DELETE',
       });
 
@@ -93,7 +93,7 @@ export const updateOrderStatus = createAsyncThunk(
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/api/orders/${orderId}/status`, {
+      const response = await fetch(`https://api.mhbstore.com/api/orders/${orderId}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

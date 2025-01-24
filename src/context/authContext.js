@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     if (accessToken && !user) {
       axios
-        .post("http://localhost:8000/api/auth/refresh", { token: refreshToken })
+        .post("https://api.mhbstore.com/api/auth/refresh", { token: refreshToken })
         .then((response) => {
           const { user, tokens } = response.data;
           setUser(user);
@@ -80,7 +80,7 @@ export const AuthProvider = ({ children }) => {
   const signUp = async (userData) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/auth/",
+        "https://api.mhbstore.com/api/auth/",
         userData
       );
       const { user, tokens } = response.data;
@@ -111,7 +111,7 @@ export const AuthProvider = ({ children }) => {
   const login = async ({ email, password }) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/auth/login",
+        "https://api.mhbstore.com/api/auth/login",
         {
           email,
           password,
@@ -146,7 +146,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       await axios.post(
-        "http://localhost:8000/api/auth/logout",
+        "https://api.mhbstore.com/api/auth/logout",
         { refreshToken: refreshToken || "" },
         {
           headers: {
@@ -177,7 +177,7 @@ export const AuthProvider = ({ children }) => {
   // Forgot Password API call
   const forgotPassword = async (email) => {
     try {
-      await axios.post("http://localhost:8000/api/auth/forgot-password", {
+      await axios.post("https://api.mhbstore.com/api/auth/forgot-password", {
         email,
       });
 
@@ -200,7 +200,7 @@ export const AuthProvider = ({ children }) => {
   const resetPassword = async (resetPasswordToken, newPassword) => {
     try {
       await axios.post(
-        "http://localhost:8000/api/auth/reset-password",
+        "https://api.mhbstore.com/api/auth/reset-password",
         {
           resetPasswordToken,
           newPassword,
@@ -228,7 +228,7 @@ export const AuthProvider = ({ children }) => {
   const getUserById = async (userId) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/api/auth/users/${userId}`,
+        `https://api.mhbstore.com/api/auth/users/${userId}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -250,7 +250,7 @@ export const AuthProvider = ({ children }) => {
   const updateProfile = async (userId, updatedData) => {
     try {
       const { data } = await axios.patch(
-        `http://localhost:8000/api/auth/users/${userId}`,
+        `https://api.mhbstore.com/api/auth/users/${userId}`,
         updatedData,
         {
           headers: {

@@ -172,7 +172,7 @@ const AddProduct = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/products",
+        "https://api.mhbstore.com/api/products",
         formData,
         {
           headers: {
